@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Module 19 || banking app</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<div class="container ">
+		<section class="login__page mt-5 mb-5 ">
+			<h1 class="text-center">Welcome to Shuvasish's Bank</h1>
+			<form>
+				<label for="exampleInputEmail1" class="font-weight-bold">Login</label>
+
+				  <div class="form-group">
+				    
+				    <input type="email" class="form-control username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="username">
+				    
+				  </div>
+				  <div class="form-group">
+				    
+				    <input type="password" class="form-control password" id="exampleInputPassword1" placeholder="password">
+				  </div>
+				  
+				  <button type="submit" class="btn login__btn btn-success">Submit</button>
+			</form>
+		</section>
+		<main class="main__page mt-6">
+			<div class="row UI mb-5">
+				<div class="col-sm-12 mb-2  mb-md-0 col-md-4 text-center  text-md-left">
+					<div class="bg-success text-white p-4 rounded">
+						<p class="h3">Deposit</p>
+						<p class="h4">$ <span class="h2 deposit">00</span></p>
+					</div>
+				</div>
+				<div class="col-sm-12 mb-2  mb-md-0 col-md-4 text-center text-md-left">
+					<div class="bg-danger text-white p-4 rounded">
+						<p class="h3">Withdraw</p>
+						<p class="h4">$ <span class="h2 withdraw">00</span></p>
+					</div>
+				</div>
+				<div class="col-sm-12 mb-2  mb-md-0 col-md-4 text-center text-md-left">
+					<div class="bg-warning text-white p-4 rounded ">
+						<p class="h3">Balance</p>
+						<p class="h4">$ <span class="h2 balance">120</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="row UX">
+				<div class="col-12 col-md-5 rounded mr-auto ml-auto shadow-lg   text-md-left">
+					<div class="  p-4 rounded ">
+						<p class="h3 text-black">Deposit</p>
+						<div class="form-group">
+							<input type="number" class="form-control password deposit__input" id="exampleInputPassword1" placeholder="$ amount you want to Deposit">
+						  </div>
+						<a href="#" class="btn btn-success deposit__btn">Deposit</a>
+					</div>
+				</div>
+				<div class="col-12 col-md-5 shadow-lg mr-auto ml-auto mt-4 rounded mt-md-0  text-md-left">
+					<div class="  p-4 rounded ">
+						<p class="h3 text-black">Withdraw</p>
+						<div class="form-group">
+							<input type="number" class="form-control password withdraw__input" id="exampleInputPassword1" placeholder="$ amount you want to Withdraw">
+						  </div>
+						<a href="#" class="btn btn-success withdraw__btn">Withdraw</a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script  src="app.js"></script>
+
+	
+	</script>
+</body>
+</html>

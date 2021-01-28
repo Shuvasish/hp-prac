@@ -1,0 +1,65 @@
+.center{
+	max-width: 400px;
+	
+	display: grid;
+	grid-template-columns: repeat(4,minmax(80px,100px));
+	grid-template-rows: 50px 50px 50px repeat(5,minmax(0px,100px));
+}
+.center div{
+	border: 1px solid rgba(0,0,0,.2);
+	display: flex;
+	background-color: yellow;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all .2s;
+}
+.center div:not(:first-child):hover ~ div{
+	border: none;
+}
+.center div:hover{
+	background-color: #d5d500;
+	color:white;
+	font-weight: bold;
+	/*transform: scale(1.06);*/
+	/*border-radius: 5px;*/
+}
+.center .display{
+	grid-column: 1/ -1;
+
+	color: black;
+	background-color: #eee;
+	font-weight: bold;
+	overflow: hidden;
+	cursor: not-allowed;
+	border:none;
+	/*grid-column-end: -1;*/
+}
+.center .display_2{
+	grid-column: 1/ -1;
+	grid-row: 2/3;
+	color: black;
+	background-color: #eee;
+	font-weight: bold;
+	overflow: hidden;
+	cursor: not-allowed;
+	border:none;
+	/*grid-column-end: -1;*/
+}
+.center .display_3{
+	grid-column: 1/ -1;
+	grid-row: 3/4;
+	color: black;
+	background-color: #eee;
+	font-weight: bold;
+	overflow: hidden;
+	cursor: not-allowed;
+	border:none;
+	/*grid-column-end: -1;*/
+}
+.center .display:hover,.center .display_2:hover,.center .display_3:hover{
+	transform: scale(1);
+	background-color: #eee;
+	border-radius: 0px;
+	color: black;
+}

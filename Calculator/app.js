@@ -5,12 +5,9 @@ const displayTop = document.querySelector('.display');
 const inputs = [];
 
 const showInnerTextToUI = function(e){
-	if(displayBottom.textContent){
-		displayBottom.textContent = '';
+
 		displayBottom.textContent = displayBottom.textContent+e.target.classList.value;
-	}else{
-		displayBottom.textContent = displayBottom.textContent+e.target.classList.value;
-	}
+	
 	// return displayBottom.textContent+e.target.classList.value;
 }
 const solution = function(operator){

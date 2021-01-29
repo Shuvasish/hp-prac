@@ -60,9 +60,19 @@ const operation = function(e,gennericMethod){
 
 
 container.addEventListener('click',function(e){
-	if(e.target.classList.value == '0' || e.target.classList.value == '1' || e.target.classList.value == '2' || e.target.classList.value == '3' ||e.target.classList.value == '4' || e.target.classList.value == '5' || e.target.classList.value == '6' || e.target.classList.value == '7' || e.target.classList.value == '8' || e.target.classList.value == '9' || e.target.classList.value == '.' ){
+	if(e.target.classList.value == '0' || e.target.classList.value == '1' || e.target.classList.value == '2' || e.target.classList.value == '3' ||e.target.classList.value == '4' || e.target.classList.value == '5' || e.target.classList.value == '6' || e.target.classList.value == '7' || e.target.classList.value == '8' || e.target.classList.value == '9' ){
 
 		showInnerTextToUI(e);	
+	}if(e.target.classList.value == '.' ){
+		const temp = displayBottom.textContent;
+		console.log( temp === (temp|0));
+		if(temp%1==0){
+			showInnerTextToUI(e);
+			// console.log('number');
+		}else if(temp%1!=0){
+			// console.log('float');
+		}
+		
 	}
 	if ( e.target.classList.value == '+' || e.target.classList.value == '-' || e.target.classList.value == '*' || e.target.classList.value == '/') {
 		if(displayTop.textContent){

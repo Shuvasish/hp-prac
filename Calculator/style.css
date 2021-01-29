@@ -63,3 +63,9 @@
 	border-radius: 0px;
 	color: black;
 }
+.center .notWorking{
+	cursor: not-allowed;
+	color: black !important;
+	font-weight: normal;
+	background-color: yellow !important;
+}

@@ -85,7 +85,7 @@ container.addEventListener('click',function(e){
 		displayMiddle.textContent='';
 	}
 	if(e.target.classList.value == 'x'){
-		displayBottom.textContent ='';
+		displayBottom.textContent =displayBottom.textContent.slice(0,-1);
 		
 	}
 	

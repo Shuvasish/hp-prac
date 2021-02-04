@@ -65,7 +65,7 @@ container.addEventListener('click',function(e){
 		showInnerTextToUI(e);	
 	}if(e.target.classList.value == '.' ){
 		const temp = displayBottom.textContent;
-		console.log( temp === (temp|0));
+		// console.log( temp === (temp|0));
 		if(temp%1==0){
 			showInnerTextToUI(e);
 			// console.log('number');

@@ -26,7 +26,7 @@ const curLoc = navigator.geolocation.getCurrentPosition(function(position){
 search.addEventListener('click',function(e){
     e.preventDefault();
     const input = city.value;
-    if(!input.value) return;
+    if(!input || input=='') return;
     my = `https://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=337ad720c924c5c104eb4f1d29b02c4d`;
     
     fetch(my).then(res=>res.json()).then(data=>{

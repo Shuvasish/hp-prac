@@ -6,17 +6,18 @@ const temp = `${apiBase}?q={city name}&appid={${apiKey}}`
 let latitude;
 let longitude;
 let my;
+const updateUI = function(data){
+        document.getElementById('show_city').textContent = `${data.city.name}`;
+        document.getElementById('show_temperature').textContent = (data.list[0].main.temp-273.15).toFixed(2);
+        document.getElementById('weather_status').textContent = data.list[0].weather[0].main;
+    }
 const curLoc = navigator.geolocation.getCurrentPosition(function(position){
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
      
     my = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=337ad720c924c5c104eb4f1d29b02c4d`;
-//    console.log(latitude,longitude);
     fetch(my).then(res => res.json()).then(data=>{
-        document.getElementById('show_city').textContent = `${data.city.name}`;
-        document.getElementById('show_temperature').textContent = (data.list[0].main.temp-273.15).toFixed(2);
-        document.getElementById('weather_status').textContent = data.list[0].weather[0].main;
-//        console.log(data)
+        updateUI(data);
         
     }).catch('err');
     
@@ -25,21 +26,18 @@ const curLoc = navigator.geolocation.getCurrentPosition(function(position){
 search.addEventListener('click',function(e){
     e.preventDefault();
     const input = city.value;
-//    console.log(input);
     
-    my = `http://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=337ad720c924c5c104eb4f1d29b02c4d`;
-//    console.log(my);
+    my = `https://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=337ad720c924c5c104eb4f1d29b02c4d`;
+    
     fetch(my).then(res=>res.json()).then(data=>{
         if(data.cod==="404"){
             alert('please recheck your given city name!')
         }else{
-            document.getElementById('show_city').textContent = `${data.city.name}`;
-            document.getElementById('show_temperature').textContent = (data.list[0].main.temp-273.15).toFixed(2);
-            document.getElementById('weather_status').textContent = data.list[0].weather[0].main;
+            updateUI(data);
         }
-//        console.log(data);
     }).catch('error');
     
+    city.value = '';
     
 })
 

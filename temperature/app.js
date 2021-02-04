@@ -10,7 +10,7 @@ const curLoc = navigator.geolocation.getCurrentPosition(function(position){
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
      
-    my = `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=337ad720c924c5c104eb4f1d29b02c4d`;
+    my = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=337ad720c924c5c104eb4f1d29b02c4d`;
 //    console.log(latitude,longitude);
     fetch(my).then(res => res.json()).then(data=>{
         document.getElementById('show_city').textContent = `${data.city.name}`;

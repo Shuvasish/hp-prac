@@ -1,0 +1,12 @@
+.custom-height{
+    height: 250px;
+}
+.img{
+/*    max-width: 300px;*/
+}
+.target{
+    
+    position: fixed;
+    right: 25px;
+    top: 20px
+}

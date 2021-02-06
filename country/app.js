@@ -45,7 +45,7 @@ cntContainer.addEventListener('click',function(e){
 
     fetch(customApi).then(res=>res.json()).then(data=>{
         const countryDetails = data[0];
-        console.log(countryDetails);
+//        console.log(countryDetails);
         const html = `
                 <h1 class="country-name  text-center">${countryDetails.name}</h1>
                 <div class="img-container">

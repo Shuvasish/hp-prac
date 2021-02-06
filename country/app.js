@@ -46,6 +46,7 @@ cntContainer.addEventListener('click',function(e){
     fetch(customApi).then(res=>res.json()).then(data=>{
         const countryDetails = data[0];
 //        console.log(countryDetails);
+        
         const html = `
                 <h1 class="country-name  text-center">${countryDetails.name}</h1>
                 <div class="img-container">
@@ -53,9 +54,9 @@ cntContainer.addEventListener('click',function(e){
                 </div>
                 <h5 class="text-left ml-2 mt-4 mb-2">Capital: <span class="capital">${countryDetails.capital}</span></h5>
 
-                <h5 class="text-left ml-2 my-2">Population: <span class="population">${countryDetails.population}</span></h5>
+                <h5 class="text-left ml-2 my-2">Population: <span class="population">${new Intl.NumberFormat('Bn-bd',{}).format(countryDetails.population)}</span></h5>
 
-                <h5 class="text-left ml-2 my-2">Area: <span class="area">${countryDetails.area}</span></h5>
+                <h5 class="text-left ml-2 my-2">Area: <span class="area">${new Intl.NumberFormat('Bn-bd',{}).format(countryDetails.area)}</span></h5>
 
                 <h5 class="text-left  ml-2 my-2">Language: <span class="language">${countryDetails.languages[0].name}</span></h5>
                 <div class="bg-danger custom-height img-container">

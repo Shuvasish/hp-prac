@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body{
+    padding: 30px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+:root{
+    --red:#ff3838;
+    --bg:#f7f7f7;
+    --text:#777;
+    --rg:linear-gradient(90deg ,rgba(255,0,0,.2),rgba(255,0,0,.5));
+}
+.tc{
+    color: #777; 
+}
+.bg{
+    background-color: #f7f7f7;
+}
+.mt{
+    margin-top: -100px;
+}
+.btn_arrow{
+    border-radius: 0;
+    color: var(--red);
+    border-bottom: 1px solid var(--red);
+    transition: all .2s;
+}
+.btn_arrow:hover{
+    background-color: var(--red);
+    color: white;
+    border-bottom: 1px solid var(--red);
+    transition: all .2s;
+}
+.btn_arrow:focus{
+    
+    box-shadow: 0 0 0 0 rgba(0,123,255,.25)
+}
+
+.btn,.btn:link,btn:visited{
+    
+    
+    text-transform: uppercase;
+    
+    transition: all .3s;
+    position: relative;
+    
+}
+.btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    z-index: -1;
+    text-transform: uppercase;
+    background: #ff3838;
+    transition: all .4s;
+}
+.btn_card{
+    padding: 15px 40px;
+    width: 300px;
+    border-radius: 50px;
+    background: #ffffff;
+    color: white;
+}
+.btn_white{
+    padding: 15px 40px;
+    width: 300px;
+    border-radius: 50px;
+    background: #ff3838;
+    color: white;
+}
+.btn_hero:hover{
+    transform: translateY(-3px);
+    color: white;
+    
+}
+.btn_hero:hover::after{
+    background: #ff3838;
+    transform: scale(1.3,1.6);
+    opacity: 0;
+    
+}
+.btn_hero:active{
+    transform: translateY(-1px); 
+}
+.gap-top{
+    padding-top: 200px;
+}
+.gap-bottom{
+    padding-bottom: 300px;
+}
+
+
+/*heder*/
+.hero{
+    height: 90vh;
+    background: linear-gradient(90deg ,rgba(255,0,0,.2),rgba(255,0,0,.5)),url(../img/hero.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 80%, 0% 100%);
+}
+.hero_text{
+    color: white;
+    
+}
+.hero_text h1{
+    font-size: 72px;
+    text-transform: uppercase;
+    animation: left .8s;
+}
+.hero_text h4{
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    animation: right .8s;
+}
+.hero_logo{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+.hero_logo img{
+    height: 50px;
+    
+}
+.hero_text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn_hero{
+    margin-top: 20px;
+    animation: top .4s .8s;
+    animation-fill-mode: backwards;
+}
+
+/*breif*/
+.breif{
+    background: var(--bg);
+    margin-top: -120px;
+}
+.breif_title h2{
+    font-size: 32px;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 600;
+    transition: all .3s;
+    margin-bottom: 60px;
+}
+.breif_title h2:hover{
+    transform: scale(1.1)skewX(19deg);
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+/*breif img*/
+.breif_img{
+    
+}
+.img_container{
+    position: relative;
+    transition: all .3s;
+}
+
+
+.img_container:hover  .breif_img:not(:hover){
+    
+    outline: 0px ;
+    transform: scale(.9);
+    z-index: 1;
+}
+.img_container:hover  .breif_img{
+    outline: 15px solid var(--red);
+    position: relative;
+    transform: scale(1.05) translateY(-8px);
+    z-index: 2;
+}
+.img1{
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.img2{
+    
+    position: absolute;
+    left: 210px;
+    top: 60px;
+}
+.img3{
+    
+    position: absolute;
+    left: 70px;
+    top: 140px;
+}
+.breif_img{
+    
+    outline-offset: 20px;
+    width: 300px;
+    transition: all .3s;
+    
+}
+
+
+/*about*/
+.about{
+    background: var(--rg), url(../img/nat-4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 700px;
+    transform: skewY(-5deg);
+    margin-top: -100px;
+}
+.about_box{
+    transform: skewY(5deg);
+}
+.about_box-common{
+    padding: 40px;
+}
+.inner_about-box{
+    padding: 20px;
+    margin-top: 200px;
+    background-color: rgba(255,255,255,.8); 
+    transition: all .3s;
+    backface-visibility: hidden;
+    
+}
+.inner_about-box:hover{
+    transform: translateY(-20px);
+}
+.about_icon{
+    font-size: 60px;
+    background-image: var(--rg);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/*tour*/
+.tour{
+    
+}
+.tour_title{
+    text-align: center;
+}
+.tour_title h2{
+    font-size: 32px;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 600;
+    transition: all .3s;
+    margin-bottom: 60px;
+}
+.tour_title h2:hover{
+    transform: scale(1.1)skewX(19deg);
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+.tour_img{
+    
+}
+/* card*/
+.card{
+    position: relative;
+    background: transparent;
+/*    perspective: 999px;*/
+    perspective: 1500px;
+    height: 500px;
+    border: none;
+}
+.front{
+    overflow: hidden;
+    transition: all 1s ease;
+    position: absolute;
+    left: 0;
+    top: 0;
+/*    perspective-origin: 25% 75%;*/
+}
+.card:hover .back{
+    transform: rotateY(0deg);
+    
+}
+.card:hover .front{
+    transform: rotateY(-180deg);
+}
+.back{
+    overflow: hidden;
+/*    perspective-origin: 25% 75%;*/
+    background-color: red;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotateY(180deg);
+    transition: all 1s ease;
+    backface-visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+/*animations*/
+@keyframes left{
+    0%{
+        transform: translateX(-300px);
+    }
+    90%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes right{
+    0%{
+        transform: translateX(300px);
+    }
+    90%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes top{
+    0%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+   
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
